@@ -1104,6 +1104,16 @@ struct OptimizeNonlinearFunctor1 : OptimizationFunctor<double>
     cayley_t cayley = x.block<3,1>(3,0);
     rotation_t rotation = math::cayley2rot(cayley);
 
+      {
+          //debug
+          std::cout << "cayley " << cayley.transpose() << "\n";
+          std::cout << "rotation " << rotation << "\n";
+          Eigen::Quaterniond q;
+          q = rotation;
+          std::cout << "quaternion " << q << "\n";
+          exit(0);
+      }
+
     Eigen::Matrix<double,4,1> p_hom;
     p_hom[3] = 1.0;
 

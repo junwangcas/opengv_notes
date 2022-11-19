@@ -60,11 +60,15 @@ int main( int argc, char** argv )
   //create a random viewpoint pose
   translation_t position = generateRandomTranslation(2.0);
   rotation_t rotation = generateRandomRotation(0.5);
-  
+  std::cout << "position " << position.transpose() << "\n";
+  std::cout << "rotation " << rotation << "\n";
+
   //create a fake central camera
   translations_t camOffsets;
   rotations_t camRotations;
   generateCentralCameraSystem( camOffsets, camRotations );
+    std::cout << "camOffsets " <<  camOffsets.size() << ", " << camOffsets[0].transpose() << "\n";
+    std::cout << "camRotations " << camRotations.size() << ", " << camRotations[0] << "\n";
   
   //derive correspondences based on random point-cloud
   bearingVectors_t bearingVectors;

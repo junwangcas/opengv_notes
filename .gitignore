@@ -3,3 +3,5 @@ build
 *.mexa64
 *.pyc
 .vscode
+.idea/
+cmake-build-debug/
