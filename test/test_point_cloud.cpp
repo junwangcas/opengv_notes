@@ -48,7 +48,7 @@ using namespace opengv;
 
 int main( int argc, char** argv )
 {
-  //initialize random seed
+  //initialize random seed; 随机生成数据，如果将srand种子设置为固定数值，则每次都能生成一样的结果
   initializeRandomSeed();
   
   //set experiment parameters

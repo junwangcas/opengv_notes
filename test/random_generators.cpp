@@ -41,8 +41,10 @@ opengv::initializeRandomSeed()
 {
   struct timeval tic;
   gettimeofday( &tic, 0 );
-  srand ( tic.tv_usec );
+//  srand ( tic.tv_usec );
+  srand(0);
 }
+
 
 Eigen::Vector3d
 opengv::generateRandomPoint( double maximumDepth, double minimumDepth )
